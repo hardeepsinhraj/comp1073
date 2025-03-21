@@ -63,7 +63,7 @@ function showTopFlavors(jsonObj) {
         article.appendChild(img);
         article.appendChild(ul);
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
-        
+        section.appendChild(article);
    
 };
 // STEP 11: The instructor will edit the JSON file - refresh your page to see the updated content
