@@ -16,7 +16,7 @@ async function populate() {
     // STEP 8: Output the iScream JSON object to the console 
     console.log(iScream);
     // STEP 9a: Invoke the populateHeader function here, then build it below
-    populateHeader();
+    populateHeader(iScream);
     // STEP 10a: Invoke the showTopFlavors function here, then build it below
     showTopFlavors();
 
@@ -25,14 +25,14 @@ async function populate() {
 populate();
 
 /* STEP 9b: Build out the populateHeader() function */
-function populateHeader() {
+function populateHeader(jsonObj) {
     // Create the H1 element
-    
+    let headerH1 = document.createElement('h1');
     // Grab the company name from the JSON object and use it for the text node
-    
+    headerH1.textContent = jsonObj.companyName;
     // Inject the complete H1 element into the DOM, inside the HEADER
-    
-};
+    header.appendChild(headerH1); 
+}; 
 /* STEP 10b: Assemble the showTopFlavors() function */
 function showTopFlavors() {
     // STEP 10c: Attache the JSON topFlavors object to a variable
